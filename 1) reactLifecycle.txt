@@ -1,0 +1,17 @@
+React lifecycle :
+====================
+1.) Mounting  (when component render first time)
+2.) Updating   (when component re-render (state/props change hone pr))
+3.) Unmounting  (when component remove/destroy)
+
+1.) lifecycle method in class components:
+    -------------------------------------
+    I. componentDidMount
+   II. componentDidUpdate
+   III. componentWillUnmount
+
+
+2.) lifecycle method in functioal components: (hooks are use in functional component for extra feature)
+    ---------------------------------------------------------------------------------------------------
+    
+

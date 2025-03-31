@@ -1,0 +1,65 @@
+🔥 What is Hook :
+================
+=> React Hooks ek special function hote hain jo functional components me state aur lifecycle features ko handle karne ke liye use hote hain.
+=> Hooks sirf functional components me kaam karte hain, class components me nahi.
+
+=======================================================================================================
+
+1️⃣ Basic Syntax of useState:-
+
+useState React ka ek hook hai, jo functional components me state manage karne ke liye use hota hai. Yeh state variable create karta hai aur usko update karne ka tarika provide karta hai.
+
+
+import { useState } from "react";
+
+function Counter() {
+  // Step 1: useState se state variable create karein
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+=======================================================================================================
+
+
+2️⃣ useEffect :- (jab component render hota hai to useEffect hooks excute hota hai)
+useEffect ek React hook hai jo side effects (effects) ko handle karne ke liye use hota hai.
+👉 Yeh component ke lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount) ka alternative hai.
+👉 Side effects ka matlab hai:
+✅ API calls
+✅ DOM manipulation
+✅ Event listeners
+✅ Subscriptions (e.g., WebSocket, Firebase)
+✅ Timers (setTimeout, setInterval)
+
+syntax of useEffect : 
+useEffect(() => {
+  // Ye effect chalega
+  return () => {
+    // Cleanup function (optional)
+  };
+}, [dependencies]);
+
+✅ useEffect me 3 cheeze hoti hain:
+
+Effect function: component render hone ke baad execute hota hai.
+Cleanup function: component unmount(remove) hone se pehle execute hota hai (optional).
+Dependency array: Isme jo values change hoti hain, unke basis par effect re-render hota hai.
+
+=========================================================================================================
+
+3️⃣  useContext (Avoid Prop Drilling)
+
+useContext global state ko easily access karne ke liye use hota hai bina prop drilling kiye.
+➡️ useContext ka use karke props ko multiple levels tak bhejne ki zaroorat nahi padti.
+
+=======================================================================================================
+
+
+
+
