@@ -1,3 +1,5 @@
+Note : Agar count change hota hai to re-rendering hoti hai.
+
 🔥 What is Hook :
 ================
 => React Hooks ek special function hote hain jo functional components me state aur lifecycle features ko handle karne ke liye use hote hain.
@@ -60,6 +62,43 @@ useContext global state ko easily access karne ke liye use hota hai bina prop dr
 
 =======================================================================================================
 
+4️⃣ useRef (Accessing DOM Elements & Persisting Values) :-
+useRef ka use DOM elements ko reference karne aur values persist(inputRef ka previous value) karne ke liye hota hai bina re-render trigger kiye.
 
+example :-
 
+import React, { useRef } from "react";
 
+function InputFocus() {
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
+}
+
+export default InputFocus;
+
+=======================================================================================================
+
+5️⃣ useReducer (Alternative to useState for Complex State Management) :-
+useReducer complex state management ke liye useState ka alternative hai, jo Redux ke jaisa kaam karta hai.
+
+=======================================================================================================
+
+6️⃣ useMemo (Performance Optimization)
+useMemo slow computations ko optimize karne ke liye use hota hai taaki unnecessary calculations na ho.
+➡️ useMemo sirf tabhi recompute karega jab dependencies ([count]) change hongi.
+
+=======================================================================================================
+
+7️⃣ useCallback (Memoizing Functions to Prevent Unnecessary Re-renders)
+useCallback ek function ko memoize karta hai taaki har render par naye function create na ho.
+➡️ useCallback function ko cache karta hai taaki unnecessary renders na ho.
